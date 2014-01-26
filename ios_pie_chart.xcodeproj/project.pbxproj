@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		948AC95218958042006946F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948AC95118958042006946F9 /* Foundation.framework */; };
+		948AC95418958042006946F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948AC95318958042006946F9 /* CoreGraphics.framework */; };
+		948AC95618958042006946F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948AC95518958042006946F9 /* UIKit.framework */; };
+		948AC95C18958042006946F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 948AC95A18958042006946F9 /* InfoPlist.strings */; };
+		948AC95E18958042006946F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 948AC95D18958042006946F9 /* main.m */; };
+		948AC96218958042006946F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 948AC96118958042006946F9 /* AppDelegate.m */; };
+		948AC96518958042006946F9 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948AC96318958042006946F9 /* Main_iPhone.storyboard */; };
+		948AC96818958042006946F9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948AC96618958042006946F9 /* Main_iPad.storyboard */; };
+		948AC96B18958042006946F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948AC96A18958042006946F9 /* ViewController.m */; };
+		948AC96D18958042006946F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 948AC96C18958042006946F9 /* Images.xcassets */; };
+		948AC998189580E1006946F9 /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 948AC98B189580E1006946F9 /* Chart.m */; };
+		948AC999189580E1006946F9 /* ChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 948AC98D189580E1006946F9 /* ChartData.m */; };
+		948AC99A189580E1006946F9 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 948AC98F189580E1006946F9 /* ChartView.m */; };
+		948AC99B189580E1006946F9 /* LegendCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 948AC991189580E1006946F9 /* LegendCellView.m */; };
+		948AC99C189580E1006946F9 /* LegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 948AC993189580E1006946F9 /* LegendView.m */; };
+		948AC99D189580E1006946F9 /* NSString+Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 948AC995189580E1006946F9 /* NSString+Chart.m */; };
+		948AC99E189580E1006946F9 /* UIColor+Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 948AC997189580E1006946F9 /* UIColor+Chart.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		948AC94E18958042006946F9 /* ios_pie_chart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_pie_chart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		948AC95118958042006946F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		948AC95318958042006946F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		948AC95518958042006946F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		948AC95918958042006946F9 /* ios_pie_chart-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ios_pie_chart-Info.plist"; sourceTree = "<group>"; };
+		948AC95B18958042006946F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		948AC95D18958042006946F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		948AC95F18958042006946F9 /* ios_pie_chart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios_pie_chart-Prefix.pch"; sourceTree = "<group>"; };
+		948AC96018958042006946F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		948AC96118958042006946F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		948AC96418958042006946F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		948AC96718958042006946F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		948AC96918958042006946F9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		948AC96A18958042006946F9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		948AC96C18958042006946F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		948AC97318958042006946F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		948AC98A189580E1006946F9 /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart.h; sourceTree = "<group>"; };
+		948AC98B189580E1006946F9 /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart.m; sourceTree = "<group>"; };
+		948AC98C189580E1006946F9 /* ChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartData.h; sourceTree = "<group>"; };
+		948AC98D189580E1006946F9 /* ChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartData.m; sourceTree = "<group>"; };
+		948AC98E189580E1006946F9 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
+		948AC98F189580E1006946F9 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
+		948AC990189580E1006946F9 /* LegendCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegendCellView.h; sourceTree = "<group>"; };
+		948AC991189580E1006946F9 /* LegendCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegendCellView.m; sourceTree = "<group>"; };
+		948AC992189580E1006946F9 /* LegendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegendView.h; sourceTree = "<group>"; };
+		948AC993189580E1006946F9 /* LegendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegendView.m; sourceTree = "<group>"; };
+		948AC994189580E1006946F9 /* NSString+Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Chart.h"; sourceTree = "<group>"; };
+		948AC995189580E1006946F9 /* NSString+Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Chart.m"; sourceTree = "<group>"; };
+		948AC996189580E1006946F9 /* UIColor+Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Chart.h"; sourceTree = "<group>"; };
+		948AC997189580E1006946F9 /* UIColor+Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Chart.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		948AC94B18958042006946F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948AC95418958042006946F9 /* CoreGraphics.framework in Frameworks */,
+				948AC95618958042006946F9 /* UIKit.framework in Frameworks */,
+				948AC95218958042006946F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		948AC94518958042006946F9 = {
+			isa = PBXGroup;
+			children = (
+				948AC95718958042006946F9 /* ios_pie_chart */,
+				948AC95018958042006946F9 /* Frameworks */,
+				948AC94F18958042006946F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		948AC94F18958042006946F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				948AC94E18958042006946F9 /* ios_pie_chart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		948AC95018958042006946F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				948AC95118958042006946F9 /* Foundation.framework */,
+				948AC95318958042006946F9 /* CoreGraphics.framework */,
+				948AC95518958042006946F9 /* UIKit.framework */,
+				948AC97318958042006946F9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		948AC95718958042006946F9 /* ios_pie_chart */ = {
+			isa = PBXGroup;
+			children = (
+				948AC989189580E1006946F9 /* Sources */,
+				948AC96018958042006946F9 /* AppDelegate.h */,
+				948AC96118958042006946F9 /* AppDelegate.m */,
+				948AC96318958042006946F9 /* Main_iPhone.storyboard */,
+				948AC96618958042006946F9 /* Main_iPad.storyboard */,
+				948AC96918958042006946F9 /* ViewController.h */,
+				948AC96A18958042006946F9 /* ViewController.m */,
+				948AC96C18958042006946F9 /* Images.xcassets */,
+				948AC95818958042006946F9 /* Supporting Files */,
+			);
+			path = ios_pie_chart;
+			sourceTree = "<group>";
+		};
+		948AC95818958042006946F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				948AC95918958042006946F9 /* ios_pie_chart-Info.plist */,
+				948AC95A18958042006946F9 /* InfoPlist.strings */,
+				948AC95D18958042006946F9 /* main.m */,
+				948AC95F18958042006946F9 /* ios_pie_chart-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		948AC989189580E1006946F9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				948AC98A189580E1006946F9 /* Chart.h */,
+				948AC98B189580E1006946F9 /* Chart.m */,
+				948AC98C189580E1006946F9 /* ChartData.h */,
+				948AC98D189580E1006946F9 /* ChartData.m */,
+				948AC98E189580E1006946F9 /* ChartView.h */,
+				948AC98F189580E1006946F9 /* ChartView.m */,
+				948AC990189580E1006946F9 /* LegendCellView.h */,
+				948AC991189580E1006946F9 /* LegendCellView.m */,
+				948AC992189580E1006946F9 /* LegendView.h */,
+				948AC993189580E1006946F9 /* LegendView.m */,
+				948AC994189580E1006946F9 /* NSString+Chart.h */,
+				948AC995189580E1006946F9 /* NSString+Chart.m */,
+				948AC996189580E1006946F9 /* UIColor+Chart.h */,
+				948AC997189580E1006946F9 /* UIColor+Chart.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		948AC94D18958042006946F9 /* ios_pie_chart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 948AC98318958042006946F9 /* Build configuration list for PBXNativeTarget "ios_pie_chart" */;
+			buildPhases = (
+				948AC94A18958042006946F9 /* Sources */,
+				948AC94B18958042006946F9 /* Frameworks */,
+				948AC94C18958042006946F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ios_pie_chart;
+			productName = ios_pie_chart;
+			productReference = 948AC94E18958042006946F9 /* ios_pie_chart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		948AC94618958042006946F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Maxim Bilan";
+			};
+			buildConfigurationList = 948AC94918958042006946F9 /* Build configuration list for PBXProject "ios_pie_chart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 948AC94518958042006946F9;
+			productRefGroup = 948AC94F18958042006946F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				948AC94D18958042006946F9 /* ios_pie_chart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		948AC94C18958042006946F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948AC96818958042006946F9 /* Main_iPad.storyboard in Resources */,
+				948AC96D18958042006946F9 /* Images.xcassets in Resources */,
+				948AC96518958042006946F9 /* Main_iPhone.storyboard in Resources */,
+				948AC95C18958042006946F9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		948AC94A18958042006946F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948AC998189580E1006946F9 /* Chart.m in Sources */,
+				948AC99C189580E1006946F9 /* LegendView.m in Sources */,
+				948AC96B18958042006946F9 /* ViewController.m in Sources */,
+				948AC99D189580E1006946F9 /* NSString+Chart.m in Sources */,
+				948AC96218958042006946F9 /* AppDelegate.m in Sources */,
+				948AC95E18958042006946F9 /* main.m in Sources */,
+				948AC99E189580E1006946F9 /* UIColor+Chart.m in Sources */,
+				948AC999189580E1006946F9 /* ChartData.m in Sources */,
+				948AC99A189580E1006946F9 /* ChartView.m in Sources */,
+				948AC99B189580E1006946F9 /* LegendCellView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		948AC95A18958042006946F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				948AC95B18958042006946F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		948AC96318958042006946F9 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				948AC96418958042006946F9 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		948AC96618958042006946F9 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				948AC96718958042006946F9 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		948AC98118958042006946F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		948AC98218958042006946F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		948AC98418958042006946F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ios_pie_chart/ios_pie_chart-Prefix.pch";
+				INFOPLIST_FILE = "ios_pie_chart/ios_pie_chart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		948AC98518958042006946F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ios_pie_chart/ios_pie_chart-Prefix.pch";
+				INFOPLIST_FILE = "ios_pie_chart/ios_pie_chart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		948AC94918958042006946F9 /* Build configuration list for PBXProject "ios_pie_chart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				948AC98118958042006946F9 /* Debug */,
+				948AC98218958042006946F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		948AC98318958042006946F9 /* Build configuration list for PBXNativeTarget "ios_pie_chart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				948AC98418958042006946F9 /* Debug */,
+				948AC98518958042006946F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 948AC94618958042006946F9 /* Project object */;
+}
