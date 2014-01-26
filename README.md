@@ -49,9 +49,8 @@ for (NSInteger groupIndex = 0; groupIndex &#60; 5; ++groupIndex) {
 }
 </pre>
 For scrolling datasets just tap on chart.
-
 <br>
-If you have one set of data, and you won't scroll them, use property:
+If you have one set of data, and you won't scroll them, use the following property:
 <pre>
 @property BOOL isScrollEnabled;
 </pre>
