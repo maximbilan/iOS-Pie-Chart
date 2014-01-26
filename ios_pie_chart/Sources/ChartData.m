@@ -1,6 +1,6 @@
 //
 //  ChartData.m
-//  wymg
+//  ios_pie_chart
 //
 //  Created by Maxim Bilan on 11/3/13.
 //  Copyright (c) 2013 Maxim. All rights reserved.
@@ -27,8 +27,7 @@
 + (NSArray *)colors
 {
     static NSArray *colors = nil;
-    if( !colors )
-    {
+    if (!colors) {
         colors = [NSArray arrayWithObjects:[UIColor greenChartColor], [UIColor yellowChartColor], [UIColor orangeChartColor], [UIColor redChartColor], [UIColor navyBlueChartColor], [UIColor blueChartColor], [UIColor pinkChartColor], [UIColor redChartColor], [UIColor purpleChartColor], [UIColor beigeChartColor], [UIColor brownChartColor], nil];
     }
     

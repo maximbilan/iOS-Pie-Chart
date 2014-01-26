@@ -1,6 +1,6 @@
 //
 //  Chart.h
-//  wymg
+//  ios_pie_chart
 //
 //  Created by Maxim on 10/22/13.
 //  Copyright (c) 2013 Maxim. All rights reserved.

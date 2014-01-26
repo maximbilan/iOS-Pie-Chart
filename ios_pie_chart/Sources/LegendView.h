@@ -1,6 +1,6 @@
 //
 //  LegendView.h
-//  wymg
+//  ios_pie_chart
 //
 //  Created by Maxim Bilan on 11/3/13.
 //  Copyright (c) 2013 Maxim. All rights reserved.
@@ -11,9 +11,9 @@
 @interface LegendView : UIView
 {
     NSMutableDictionary *data;
-    NSMutableArray      *legends;
+    NSMutableArray *legends;
     
-    NSString            *currentKey;
+    NSString *currentKey;
 }
 
 @property BOOL isTitleEnabled;

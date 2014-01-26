@@ -1,6 +1,6 @@
 //
 //  LegendCellView.h
-//  wymg
+//  ios_pie_chart
 //
 //  Created by Maxim Bilan on 11/3/13.
 //  Copyright (c) 2013 Maxim. All rights reserved.
@@ -13,8 +13,8 @@
     UIColor *fontColor;
 }
 
-@property (nonatomic, strong) NSString	*text;
-@property (nonatomic, strong) UIColor	*color;
+@property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) UIColor *color;
 
 @property float percent;
 

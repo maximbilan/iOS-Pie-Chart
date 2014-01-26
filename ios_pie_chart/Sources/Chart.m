@@ -1,6 +1,6 @@
 //
 //  Chart.m
-//  wymg
+//  ios_pie_chart
 //
 //  Created by Maxim on 10/22/13.
 //  Copyright (c) 2013 Maxim. All rights reserved.
@@ -12,23 +12,23 @@
 #import "LegendView.h"
 #import "UIColor+Chart.h"
 
-static const float          ChartDefaultScale           = 1.0f;
+static const float          ChartDefaultScale           = 1.0;
 
 static const int            ChartMaxItemCount           = 5;
 static const int            ChartSummaryColorIndex      = 4;
 
-static const NSTimeInterval ChartFadeInTime             = 0.2f;
-static const NSTimeInterval ChartFadeOutTime            = 0.6f;
+static const NSTimeInterval ChartFadeInTime             = 0.2;
+static const NSTimeInterval ChartFadeOutTime            = 0.6;
 
-static const CGFloat        ChartViewPositionRectX      = 0.0f;
-static const CGFloat        ChartViewPositionRectY      = 0.0f;
-static const CGFloat        ChartViewPositionRectW      = 280.0f;
-static const CGFloat        ChartViewPositionRectH      = 200.0f;
+static const CGFloat        ChartViewPositionRectX      = 0.0;
+static const CGFloat        ChartViewPositionRectY      = 0.0;
+static const CGFloat        ChartViewPositionRectW      = 280.0;
+static const CGFloat        ChartViewPositionRectH      = 200.0;
 
-static const CGFloat        LegendViewPositionRectX     = 200.0f;
-static const CGFloat        LegendViewPositionRectY     = 55.0f;
-static const CGFloat        LegendViewPositionRectW     = 80.0f;
-static const CGFloat        LegendViewPositionRectH     = 200.0f;
+static const CGFloat        LegendViewPositionRectX     = 200.0;
+static const CGFloat        LegendViewPositionRectY     = 55.0;
+static const CGFloat        LegendViewPositionRectW     = 80.0;
+static const CGFloat        LegendViewPositionRectH     = 200.0;
 
 @interface Chart ()
 
@@ -47,13 +47,12 @@ static const CGFloat        LegendViewPositionRectH     = 200.0f;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if( self )
-	{
+    if (self) {
         keys = [[NSMutableArray alloc] init];
         self.currentKeyIndex = 0;
-        _scale = ChartDefaultScale;
-        _isScrollEnabled = YES;
-        _isLegendTitleEnabled = YES;
+        self.scale = ChartDefaultScale;
+        self.isScrollEnabled = YES;
+        self.isLegendTitleEnabled = YES;
     }
     return self;
 }
@@ -76,13 +75,11 @@ static const CGFloat        LegendViewPositionRectH     = 200.0f;
 
 - (void)setCurrentKeyIndex:(NSUInteger)currentKeyIndex
 {
-    if( currentKeyIndex < [keys count] )
-    {
+    if (currentKeyIndex < [keys count]) {
         _currentKeyIndex = currentKeyIndex;
         [self scrollChart];
     }
-    else
-    {
+    else {
         _currentKeyIndex = 0;
     }
 }
@@ -92,22 +89,20 @@ static const CGFloat        LegendViewPositionRectH     = 200.0f;
     ChartItemDerived* derivedRecord = [[ChartItemDerived alloc] init];
 	derivedRecord.name = name;
 	derivedRecord.value = value;
-	derivedRecord.percent = ( derivedRecord.value * 100.0f ) / total;
+	derivedRecord.percent = (derivedRecord.value * 100.0) / total;
     
     [table addObject:derivedRecord];
 }
 
 - (void)setData:(NSArray *)array withKey:(NSString *)key withTotal:(float)total
 {
-    if( !chartView )
-    {
-        chartView = [[ChartView alloc] initWithFrame:CGRectMake( ChartViewPositionRectX, ChartViewPositionRectY * _scale, ChartViewPositionRectW, ChartViewPositionRectH * _scale )];
+    if (!chartView) {
+        chartView = [[ChartView alloc] initWithFrame:CGRectMake(ChartViewPositionRectX, ChartViewPositionRectY * self.scale, ChartViewPositionRectW, ChartViewPositionRectH * self.scale)];
         [self addSubview:chartView];
     }
     
-    if( !legendView )
-    {
-        legendView = [[LegendView alloc] initWithFrame:CGRectMake( LegendViewPositionRectX, LegendViewPositionRectY * _scale * 0.5f, LegendViewPositionRectW, LegendViewPositionRectH * _scale)];
+    if (!legendView) {
+        legendView = [[LegendView alloc] initWithFrame:CGRectMake(LegendViewPositionRectX, LegendViewPositionRectY * self.scale * 0.5, LegendViewPositionRectW, LegendViewPositionRectH * self.scale)];
         [self addSubview:legendView];
     }
     
@@ -119,37 +114,32 @@ static const CGFloat        LegendViewPositionRectH     = 200.0f;
     NSArray *sortedArray = [array sortedArrayUsingDescriptors:sortDescriptors];
     
 	int index = 0;
-	float otherValue = 0.0f;
+	float otherValue = 0.0;
 	BOOL moreThanMaxRecordsCount = NO;
-	for( ChartItem *record in sortedArray )
-	{
-		if( index >= ChartMaxItemCount - 1 )
-		{
+	for (ChartItem *record in sortedArray) {
+		if (index >= ChartMaxItemCount - 1) {
 			moreThanMaxRecordsCount = YES;
 			otherValue += record.value;
 		}
-		else
-		{
+		else {
             [self addRecordToTableData:data withName:record.name withValue:record.value withTotal:total];
 		}
 		
 		++index;
 	}
 	
-	if( moreThanMaxRecordsCount )
-	{
+	if (moreThanMaxRecordsCount) {
         [self addRecordToTableData:data withName:@"Other" withValue:otherValue withTotal:total];
 	}
     
-    if( ![keys containsObject:key] )
-    {
+    if (![keys containsObject:key]) {
         [keys addObject:key];
     }
     
     [chartView setData:data withType:key];
-    [chartView setScale:_scale];
+    [chartView setScale:self.scale];
     [legendView setData:data withKey:key];
-    [legendView setIsTitleEnabled:_isLegendTitleEnabled];
+    [legendView setIsTitleEnabled:self.isLegendTitleEnabled];
     
     NSString *keyStr = [keys objectAtIndex:self.currentKeyIndex];
     [chartView changeKey:keyStr];
@@ -168,24 +158,18 @@ static const CGFloat        LegendViewPositionRectH     = 200.0f;
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if( _isScrollEnabled )
-    {
-        if( _currentKeyIndex == ( [keys count] - 1 ) )
-        {
-            _currentKeyIndex = 0;
+    if (self.isScrollEnabled) {
+        if (self.currentKeyIndex == ([keys count] - 1)) {
+            self.currentKeyIndex = 0;
         }
-        else
-        {
-            ++_currentKeyIndex;
+        else {
+            ++self.currentKeyIndex;
         }
     
-        if( ![chartView hasDataForKey:[keys objectAtIndex:_currentKeyIndex]] )
-        {
-            for( NSUInteger index = 0; index < [keys count]; ++index )
-            {
-                if( [chartView hasDataForKey:[keys objectAtIndex:index]] )
-                {
-                    _currentKeyIndex = index;
+        if (![chartView hasDataForKey:[keys objectAtIndex:self.currentKeyIndex]]) {
+            for (NSUInteger index = 0; index < [keys count]; ++index) {
+                if ([chartView hasDataForKey:[keys objectAtIndex:index]]) {
+                    self.currentKeyIndex = index;
                     break;
                 }
             }
@@ -201,10 +185,10 @@ static const CGFloat        LegendViewPositionRectH     = 200.0f;
                           delay:0
                         options:0
                      animations:^{
-                         self.alpha = 0.0f;
+                         self.alpha = 0.0;
                      }
-                     completion:^( BOOL finished ) {
-                         NSString *key = [keys objectAtIndex:_currentKeyIndex];
+                     completion:^(BOOL finished) {
+                         NSString *key = [keys objectAtIndex:self.currentKeyIndex];
                          
                          [chartView changeKey:key];
                          [legendView changeKey:key];
@@ -216,7 +200,7 @@ static const CGFloat        LegendViewPositionRectH     = 200.0f;
                                                delay:0
                                              options:0
                                           animations:^{
-                                              self.alpha = 1.0f;
+                                              self.alpha = 1.0;
                                           }
                                           completion:nil];
                      }];

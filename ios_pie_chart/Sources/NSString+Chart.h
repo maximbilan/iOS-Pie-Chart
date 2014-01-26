@@ -1,6 +1,6 @@
 //
 //  NSString+Chart.h
-//  wymg
+//  ios_pie_chart
 //
 //  Created by Maxim Bilan on 11/10/13.
 //  Copyright (c) 2013 Maxim. All rights reserved.

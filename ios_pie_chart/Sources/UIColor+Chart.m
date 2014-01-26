@@ -1,6 +1,6 @@
 //
 //  UIColor+Chart.m
-//  wymg
+//  ios_pie_chart
 //
 //  Created by Maxim Bilan on 10/30/13.
 //  Copyright (c) 2013 Maxim. All rights reserved.

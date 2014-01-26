@@ -1,6 +1,6 @@
 //
 //  ChartView.h
-//  wymg
+//  ios_pie_chart
 //
 //  Created by Maxim Bilan on 11/3/13.
 //  Copyright (c) 2013 Maxim. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM( NSInteger, ChartViewType )
+typedef NS_ENUM(NSInteger, ChartViewType)
 {
     ChartDefault,
     ChartBagel
@@ -18,8 +18,8 @@ typedef NS_ENUM( NSInteger, ChartViewType )
 {
     NSMutableDictionary *data;
     
-    NSString            *currentKey;
-    NSInteger           type;
+    NSString *currentKey;
+    NSInteger type;
 }
 
 @property float scale;

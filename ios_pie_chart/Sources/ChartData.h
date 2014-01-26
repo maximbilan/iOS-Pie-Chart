@@ -1,6 +1,6 @@
 //
 //  ChartData.h
-//  wymg
+//  ios_pie_chart
 //
 //  Created by Maxim Bilan on 11/3/13.
 //  Copyright (c) 2013 Maxim. All rights reserved.
@@ -10,19 +10,19 @@
 
 @interface ChartItem : NSObject
 
-@property NSString	*name;
-@property float		value;
+@property NSString *name;
+@property float value;
 
 @end
 
 @interface ChartItemDerived : ChartItem
 
-@property float		percent;
+@property float percent;
 
 @end
 
 @interface ChartData : NSObject
 
-+ (NSArray*)colors;
++ (NSArray *)colors;
 
 @end
