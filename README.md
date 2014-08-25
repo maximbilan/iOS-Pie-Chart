@@ -54,8 +54,3 @@ If you have one set of data, and you won't scroll them, use the following proper
 <pre>
 @property BOOL isScrollEnabled;
 </pre>
-
-Apps using frequency table
-============
-
-<a href="https://itunes.apple.com/us/app/wymg/id769463031">Wymg</a> - Where your money goes? Want to know? Easiest way to track your expenses, use wymg. Designed with simplicity and usability. With just a few taps you can track your expense or check purchases.
