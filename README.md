@@ -35,7 +35,6 @@ NSMutableArray *array = [[NSMutableArray alloc] init];
     
 float total;
 for (NSInteger groupIndex = 0; groupIndex &#60; 5; ++groupIndex) {
-        
   [array removeAllObjects];
   total = 0.0;
   for (NSInteger itemIndex = 0; itemIndex &#60; 10; ++itemIndex) {
