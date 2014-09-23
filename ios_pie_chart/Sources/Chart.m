@@ -43,7 +43,7 @@ static const CGFloat        LegendViewPositionRectH     = 200.0;
 @synthesize isScrollEnabled = _isScrollEnabled;
 @synthesize isLegendTitleEnabled = _isLegendTitleEnabled;
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -109,7 +109,7 @@ static const CGFloat        LegendViewPositionRectH     = 200.0;
     
     NSSortDescriptor *sortDescriptorValue = [[NSSortDescriptor alloc] initWithKey:@"value" ascending:NO];
 	NSSortDescriptor *sortDescriptorName = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
-	NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptorValue, sortDescriptorName, nil];
+	NSArray *sortDescriptors = @[sortDescriptorValue, sortDescriptorName];
     NSArray *sortedArray = [array sortedArrayUsingDescriptors:sortDescriptors];
     
 	int index = 0;
@@ -140,7 +140,7 @@ static const CGFloat        LegendViewPositionRectH     = 200.0;
     [legendView setData:data withKey:key];
     [legendView setIsTitleEnabled:self.isLegendTitleEnabled];
     
-    NSString *keyStr = [keys objectAtIndex:self.currentKeyIndex];
+    NSString *keyStr = keys[self.currentKeyIndex];
     [chartView changeKey:keyStr];
     [legendView changeKey:keyStr];
     
@@ -150,7 +150,7 @@ static const CGFloat        LegendViewPositionRectH     = 200.0;
 - (BOOL)hasDataForKeyIndex:(NSInteger)keyIndex
 {
     if (keyIndex >= 0 && keyIndex < [keys count]) {
-        return [chartView hasDataForKey:[keys objectAtIndex:keyIndex]];
+        return [chartView hasDataForKey:keys[keyIndex]];
     }
     return NO;
 }
@@ -165,9 +165,9 @@ static const CGFloat        LegendViewPositionRectH     = 200.0;
             ++self.currentKeyIndex;
         }
     
-        if (![chartView hasDataForKey:[keys objectAtIndex:self.currentKeyIndex]]) {
+        if (![chartView hasDataForKey:keys[self.currentKeyIndex]]) {
             for (NSUInteger index = 0; index < [keys count]; ++index) {
-                if ([chartView hasDataForKey:[keys objectAtIndex:index]]) {
+                if ([chartView hasDataForKey:keys[index]]) {
                     self.currentKeyIndex = index;
                     break;
                 }
@@ -187,7 +187,7 @@ static const CGFloat        LegendViewPositionRectH     = 200.0;
                          self.alpha = 0.0;
                      }
                      completion:^(BOOL finished) {
-                         NSString *key = [keys objectAtIndex:self.currentKeyIndex];
+                         NSString *key = keys[self.currentKeyIndex];
                          
                          [chartView changeKey:key];
                          [legendView changeKey:key];

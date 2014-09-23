@@ -25,7 +25,7 @@ static const CGFloat    ChartViewLineWidth          = 1.0;
 
 @synthesize scale = _scale;
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -47,7 +47,7 @@ static const CGFloat    ChartViewLineWidth          = 1.0;
 	CGContextFillRect(context, rect);
     
     if ([currentKey length] > 0) {
-        NSArray* d = [data objectForKey:currentKey];
+        NSArray* d = data[currentKey];
         if ([d count] > 0) {
             float prevPercent = 0.0;
             CGFloat startAngle = 0.0;
@@ -59,7 +59,7 @@ static const CGFloat    ChartViewLineWidth          = 1.0;
             for (ChartItemDerived* item in d) {
                 const float percent = [item percent];
                 const BOOL isOther = [[item name] isEqualToString:@"Other"];
-                UIColor *color = (!isOther) ? [colors objectAtIndex:index] : [colors objectAtIndex:ChartViewSummaryColorIndex];
+                UIColor *color = (!isOther) ? colors[index] : colors[ChartViewSummaryColorIndex];
      
                 startAngle = (((prevPercent) / 100.0) * 2 * (float)M_PI) - ((float)M_PI * 0.5);
                 endAngle = (((percent) / 100.0) * 2 * (float)M_PI) + startAngle;
@@ -98,7 +98,7 @@ static const CGFloat    ChartViewLineWidth          = 1.0;
         [temp addObject:item];
     }
     
-    [data setObject:temp forKey:t];
+    data[t] = temp;
     currentKey = t;
     
     [self setNeedsDisplay];
@@ -114,7 +114,7 @@ static const CGFloat    ChartViewLineWidth          = 1.0;
 {
     BOOL hasData = NO;
     if ([currentKey length] > 0) {
-        NSArray* d = [data objectForKey:key];
+        NSArray* d = data[key];
         if ([d count] > 0) {
             hasData = YES;
         }

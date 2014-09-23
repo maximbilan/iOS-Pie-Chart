@@ -23,7 +23,7 @@ static const    CGFloat             LegendCellViewPercentOffset     = 50.0;
 @synthesize color = _color;
 @synthesize percent = _percent;
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {

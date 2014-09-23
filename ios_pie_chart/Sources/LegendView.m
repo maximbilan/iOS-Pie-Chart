@@ -33,7 +33,7 @@ static const    int                 LegendViewItemAmount            = 5;
 
 @synthesize isTitleEnabled = _isTitleEnabled;
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -55,7 +55,7 @@ static const    int                 LegendViewItemAmount            = 5;
 	CGContextFillRect(context, rect);
     
     if (self.isTitleEnabled && [currentKey length] > 0) {
-        NSArray* d = [data objectForKey:currentKey];
+        NSArray* d = data[currentKey];
         if ([d count] > 0) {
             NSDictionary *attributesTitle = [NSString generateAttributes:LegendViewTitleFontFamily
                                                             withFontSize:LegendViewTitleFontSize
@@ -76,7 +76,7 @@ static const    int                 LegendViewItemAmount            = 5;
         [temp addObject:item];
     }
     
-    [data setObject:temp forKey:key];
+    data[key] = temp;
     currentKey = key;
     
     [self createCells];
@@ -92,7 +92,7 @@ static const    int                 LegendViewItemAmount            = 5;
     [legends removeAllObjects];
     
     if ([currentKey length] > 0) {
-        NSArray* finaData = [data objectForKey:currentKey];
+        NSArray* finaData = data[currentKey];
         if ([finaData count] > 0) {
             CGFloat x = 0.0;
             CGFloat y = LegendViewItemYStartOffset;
@@ -105,7 +105,7 @@ static const    int                 LegendViewItemAmount            = 5;
         
                 LegendCellView *cellView = [[LegendCellView alloc] initWithFrame:CGRectMake(x, y, LegendViewItemWidth, LegendViewItemHeight)];
                 [self addSubview:cellView];
-                [cellView setColor:[colors objectAtIndex:index]];
+                [cellView setColor:colors[index]];
                 [cellView setText:[item name]];
                 [cellView setPercent:item.percent];
                 [legends addObject:cellView];
