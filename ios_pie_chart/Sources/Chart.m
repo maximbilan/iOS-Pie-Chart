@@ -96,12 +96,12 @@ static const CGFloat        LegendViewPositionRectH     = 200.0;
 - (void)setData:(NSArray *)array withKey:(NSString *)key withTotal:(float)total
 {
     if (!chartView) {
-        chartView = [[ChartView alloc] initWithFrame:CGRectMake(ChartViewPositionRectX, ChartViewPositionRectY * self.scale, ChartViewPositionRectW, ChartViewPositionRectH * self.scale)];
+        chartView = [[ChartView alloc] initWithFrame:CGRectMake(ChartViewPositionRectX * self.scale, ChartViewPositionRectY * self.scale, ChartViewPositionRectW * self.scale, ChartViewPositionRectH * self.scale)];
         [self addSubview:chartView];
     }
     
     if (!legendView) {
-        legendView = [[LegendView alloc] initWithFrame:CGRectMake(LegendViewPositionRectX, LegendViewPositionRectY * self.scale * 0.5, LegendViewPositionRectW, LegendViewPositionRectH * self.scale)];
+        legendView = [[LegendView alloc] initWithFrame:CGRectMake(LegendViewPositionRectX * self.scale, LegendViewPositionRectY * self.scale * 0.5, LegendViewPositionRectW * self.scale, LegendViewPositionRectH * self.scale)];
         [self addSubview:legendView];
     }
     

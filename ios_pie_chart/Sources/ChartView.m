@@ -65,9 +65,9 @@ static const CGFloat    ChartViewLineWidth          = 1.0;
                 endAngle = (((percent) / 100.0) * 2 * (float)M_PI) + startAngle;
      
                 CGContextSetFillColorWithColor(context, color.CGColor);
-                CGContextMoveToPoint(context, ChartViewPositionX, ChartViewPositionY * self.scale);
+                CGContextMoveToPoint(context, ChartViewPositionX * self.scale, ChartViewPositionY * self.scale);
          
-                CGContextAddArc(context, ChartViewPositionX, ChartViewPositionY * self.scale, ChartViewRadius * self.scale, startAngle, endAngle, 0);
+                CGContextAddArc(context, ChartViewPositionX * self.scale, ChartViewPositionY * self.scale, ChartViewRadius * self.scale, startAngle, endAngle, 0);
                 CGContextSetLineWidth(context, ChartViewLineWidth);
                 CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
                 CGContextDrawPath(context, kCGPathFillStroke);
@@ -78,9 +78,9 @@ static const CGFloat    ChartViewLineWidth          = 1.0;
             
             if (type == ChartBagel) {
                 CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
-                CGContextMoveToPoint(context, ChartViewPositionX, ChartViewPositionY * self.scale);
+                CGContextMoveToPoint(context, ChartViewPositionX * self.scale, ChartViewPositionY * self.scale);
             
-                CGContextAddArc(context, ChartViewPositionX, ChartViewPositionY * self.scale, ChartViewKernelRadius * self.scale, 0, M_PI * 2, 0);
+                CGContextAddArc(context, ChartViewPositionX * self.scale, ChartViewPositionY * self.scale, ChartViewKernelRadius * self.scale, 0, M_PI * 2, 0);
                 CGContextSetLineWidth(context, ChartViewLineWidth);
                 CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
                 CGContextDrawPath(context, kCGPathFillStroke);
