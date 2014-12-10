@@ -9,13 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface LegendCellView : UIView
-{
-    UIColor *fontColor;
-}
 
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) UIColor *color;
 
-@property float percent;
+@property (nonatomic) float percent;
 
 @end

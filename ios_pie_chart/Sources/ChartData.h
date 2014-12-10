@@ -10,14 +10,14 @@
 
 @interface ChartItem : NSObject
 
-@property NSString *name;
-@property float value;
+@property (nonatomic) NSString *name;
+@property (nonatomic) float value;
 
 @end
 
 @interface ChartItemDerived : ChartItem
 
-@property float percent;
+@property (nonatomic) float percent;
 
 @end
 

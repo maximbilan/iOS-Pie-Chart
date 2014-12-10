@@ -21,6 +21,16 @@ static const CGFloat    ChartViewKernelRadius       = 25.0;
 
 static const CGFloat    ChartViewLineWidth          = 1.0;
 
+@interface ChartView ()
+{
+    NSMutableDictionary *data;
+    
+    NSString *currentKey;
+    NSInteger type;
+}
+
+@end
+
 @implementation ChartView
 
 @synthesize scale = _scale;

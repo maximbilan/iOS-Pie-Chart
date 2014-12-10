@@ -12,17 +12,11 @@
 @class LegendView;
 
 @interface Chart : UIView
-{
-    NSMutableArray  *keys;
-    
-    ChartView       *chartView;
-    LegendView      *legendView;
-}
 
 @property (nonatomic) NSUInteger currentKeyIndex;
-@property float scale;
-@property BOOL isScrollEnabled;
-@property BOOL isLegendTitleEnabled;
+@property (nonatomic) float scale;
+@property (nonatomic) BOOL isScrollEnabled;
+@property (nonatomic) BOOL isLegendTitleEnabled;
 
 - (void)setData:(NSArray *)array withKey:(NSString *)key withTotal:(float)total;
 - (BOOL)hasDataForKeyIndex:(NSInteger)keyIndex;

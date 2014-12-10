@@ -15,17 +15,11 @@ typedef NS_ENUM(NSInteger, ChartViewType)
 };
 
 @interface ChartView : UIView
-{
-    NSMutableDictionary *data;
-    
-    NSString *currentKey;
-    NSInteger type;
-}
-
-@property float scale;
 
 - (void)setData:(NSArray *)array withType:(NSString *)t;
 - (void)changeKey:(NSString *)key;
 - (BOOL)hasDataForKey:(NSString *)key;
+
+@property (nonatomic) float scale;
 
 @end

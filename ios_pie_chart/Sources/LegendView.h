@@ -9,16 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface LegendView : UIView
-{
-    NSMutableDictionary *data;
-    NSMutableArray *legends;
-    
-    NSString *currentKey;
-}
-
-@property BOOL isTitleEnabled;
 
 - (void)setData:(NSArray *)array withKey:(NSString *)key;
 - (void)changeKey:(NSString *)key;
+
+@property (nonatomic) BOOL isTitleEnabled;
 
 @end

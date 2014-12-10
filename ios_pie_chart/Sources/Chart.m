@@ -30,6 +30,12 @@ static const CGFloat        LegendViewPositionRectW     = 80.0;
 static const CGFloat        LegendViewPositionRectH     = 200.0;
 
 @interface Chart ()
+{
+    NSMutableArray  *keys;
+    
+    ChartView       *chartView;
+    LegendView      *legendView;
+}
 
 - (void)addRecordToTableData:(NSMutableArray *)table withName:(NSString *)name withValue:(float)value withTotal:(float)total;
 - (void)scrollChart;

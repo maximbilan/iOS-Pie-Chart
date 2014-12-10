@@ -24,6 +24,12 @@ static const    CGFloat             LegendViewItemYOffset           = 1.0;
 static const    int                 LegendViewItemAmount            = 5;
 
 @interface LegendView ()
+{
+    NSMutableDictionary *data;
+    NSMutableArray *legends;
+    
+    NSString *currentKey;
+}
 
 - (void)createCells;
 
