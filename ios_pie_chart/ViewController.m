@@ -35,13 +35,13 @@
         total = 0.0;
         for (NSInteger itemIndex = 0; itemIndex < 10; ++itemIndex) {
             ChartItem *item = [[ChartItem alloc] init];
-            item.name = [NSString stringWithFormat:@"Item %d", itemIndex];
+            item.name = [NSString stringWithFormat:@"Item %@", @(itemIndex)];
             item.value = RAND_FROM_TO(1, 500);
             total += item.value;
             [array addObject:item];
         }
         
-        [self.chart setData:array withKey:[NSString stringWithFormat:@"Group %d", groupIndex+1] withTotal:total];
+        [self.chart setData:array withKey:[NSString stringWithFormat:@"Group %@", @(groupIndex + 1)] withTotal:total];
     }
 }
 
