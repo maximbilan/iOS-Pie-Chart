@@ -28,7 +28,17 @@
 {
     static NSArray *colors = nil;
     if (!colors) {
-        colors = @[[UIColor greenChartColor], [UIColor yellowChartColor], [UIColor orangeChartColor], [UIColor redChartColor], [UIColor navyBlueChartColor], [UIColor blueChartColor], [UIColor pinkChartColor], [UIColor redChartColor], [UIColor purpleChartColor], [UIColor beigeChartColor], [UIColor brownChartColor]];
+        colors = @[[UIColor greenChartColor],
+				   [UIColor yellowChartColor],
+				   [UIColor orangeChartColor],
+				   [UIColor redChartColor],
+				   [UIColor navyBlueChartColor],
+				   [UIColor blueChartColor],
+				   [UIColor pinkChartColor],
+				   [UIColor redChartColor],
+				   [UIColor purpleChartColor],
+				   [UIColor beigeChartColor],
+				   [UIColor brownChartColor]];
     }
     
     return colors;

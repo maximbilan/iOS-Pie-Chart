@@ -33,7 +33,8 @@
         
         [array removeAllObjects];
         total = 0.0;
-        for (NSInteger itemIndex = 0; itemIndex < 10; ++itemIndex) {
+		
+		for (NSInteger itemIndex = 0; itemIndex < 10; ++itemIndex) {
             ChartItem *item = [[ChartItem alloc] init];
             item.name = [NSString stringWithFormat:@"Item %@", @(itemIndex)];
             item.value = RAND_FROM_TO(1, 500);
