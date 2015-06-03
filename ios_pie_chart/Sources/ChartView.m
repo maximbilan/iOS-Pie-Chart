@@ -12,7 +12,7 @@
 
 static const float      ChartViewDefaultScale       = 1.0;
 
-static const int        ChartViewSummaryColorIndex  = 4;
+static const NSInteger	ChartViewSummaryColorIndex  = 4;
 
 static const CGFloat    ChartViewPositionX          = 80.0;
 static const CGFloat    ChartViewPositionY          = 80.0;

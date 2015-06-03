@@ -13,7 +13,7 @@
 
 static			NSString * const	LegendCellViewFontFamily		= @"TrebuchetMS";
 static const	CGFloat				LegendCellViewFontSize			= 8.0;
-static const	int					LegendCellViewMaxCharacter		= 14;
+static const	NSInteger			LegendCellViewMaxCharacter		= 14;
 static const    CGFloat             LegendCellViewNameOffset        = 3.0;
 static const    CGFloat             LegendCellViewPercentOffset     = 50.0;
 

@@ -21,7 +21,7 @@ static const    CGFloat             LegendViewItemWidth             = 75;
 static const    CGFloat             LegendViewItemHeight            = 15;
 static const    CGFloat             LegendViewItemYStartOffset      = 5.0;
 static const    CGFloat             LegendViewItemYOffset           = 1.0;
-static const    int                 LegendViewItemAmount            = 5;
+static const    NSInteger			LegendViewItemAmount            = 5;
 
 @interface LegendView ()
 {

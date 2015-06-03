@@ -14,7 +14,7 @@
 
 static const float          ChartDefaultScale           = 1.0;
 
-static const int            ChartMaxItemCount           = 5;
+static const NSInteger		ChartMaxItemCount           = 5;
 
 static const NSTimeInterval ChartFadeInTime             = 0.2;
 static const NSTimeInterval ChartFadeOutTime            = 0.6;
