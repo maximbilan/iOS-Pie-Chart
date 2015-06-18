@@ -4,7 +4,7 @@ iOS Pie Chart
 Pie chart component.<br>
 ![alt tag](https://raw.github.com/maximbilan/ios_pie_chart/master/img/img1.png)
 
-<b>How to use:</b>
+## Installation
 <br>
 Add to your project source files: <br>
 <pre>
@@ -23,6 +23,8 @@ NSString+Chart.m
 UIColor+Chart.h
 UIColor+Chart.m
 </pre>
+
+## How to use
 
 You can add view in the Interface builder and set class to FrequencyTable or create in the code: <br>
 <pre>
