@@ -5,7 +5,7 @@ Pie chart component.<br>
 ![alt tag](https://raw.github.com/maximbilan/ios_pie_chart/master/img/img1.png)
 
 ## Installation
-<br>
+
 Add to your project source files: <br>
 <pre>
 Chart.h
@@ -28,7 +28,7 @@ UIColor+Chart.m
 
 You can add view in the Interface builder and set class to Chart or create in the code: <br>
 <pre>
-Chart* chart = [[Chart alloc] initWithFrame:CGRectMake(0, 256, 256, 256)];
+Chart *chart = [[Chart alloc] initWithFrame:CGRectMake(0, 256, 256, 256)];
 [self.view addSubview:chart];
 </pre>
 For adding chart data, you can use the following code: <br>
