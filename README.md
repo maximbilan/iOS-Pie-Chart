@@ -26,7 +26,7 @@ UIColor+Chart.m
 
 ## How to use
 
-You can add view in the Interface builder and set class to Chart or create in the code: <br>
+You can add view in the Interface builder and set class to <i>Chart</i> or create in the code: <br>
 <pre>
 Chart *chart = [[Chart alloc] initWithFrame:CGRectMake(0, 256, 256, 256)];
 [self.view addSubview:chart];
