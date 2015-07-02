@@ -1,12 +1,12 @@
 iOS Pie Chart
 =============
 
-Pie chart component.<br>
+Pie chart control.<br>
 ![alt tag](https://raw.github.com/maximbilan/ios_pie_chart/master/img/img1.png)
 
 ## Installation
 
-Add to your project source files: <br>
+Add to your project the next source files: <br>
 <pre>
 Chart.h
 Chart.m
@@ -26,7 +26,7 @@ UIColor+Chart.m
 
 ## How to use
 
-You can add view in the Interface builder and set class to <i>Chart</i> or create in the code: <br>
+You can add view in the <i>Interface builder</i> and set class to <i>Chart</i> or create in the code: <br>
 <pre>
 Chart *chart = [[Chart alloc] initWithFrame:CGRectMake(0, 256, 256, 256)];
 [self.view addSubview:chart];
