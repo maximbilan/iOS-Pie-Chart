@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D21F1D11BBD8C6300F2B55E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D21F1D01BBD8C6300F2B55E /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		948AC95218958042006946F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948AC95118958042006946F9 /* Foundation.framework */; };
 		948AC95418958042006946F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948AC95318958042006946F9 /* CoreGraphics.framework */; };
 		948AC95618958042006946F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948AC95518958042006946F9 /* UIKit.framework */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D21F1D01BBD8C6300F2B55E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		948AC94E18958042006946F9 /* ios_pie_chart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_pie_chart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		948AC95118958042006946F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		948AC95318958042006946F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,6 +115,7 @@
 				948AC96A18958042006946F9 /* ViewController.m */,
 				948AC96C18958042006946F9 /* Images.xcassets */,
 				948AC95818958042006946F9 /* Supporting Files */,
+				6D21F1D01BBD8C6300F2B55E /* LaunchScreen.storyboard */,
 			);
 			path = ios_pie_chart;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				948AC96818958042006946F9 /* Main_iPad.storyboard in Resources */,
 				948AC96D18958042006946F9 /* Images.xcassets in Resources */,
 				948AC96518958042006946F9 /* Main_iPhone.storyboard in Resources */,
+				6D21F1D11BBD8C6300F2B55E /* LaunchScreen.storyboard in Resources */,
 				948AC95C18958042006946F9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
