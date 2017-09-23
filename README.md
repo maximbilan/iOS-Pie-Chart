@@ -26,7 +26,7 @@ UIColor+Chart.m
 
 ## How to use
 
-You can add view in the <i>Interface builder</i> and set class to <i>Chart</i> or create in the code: <br>
+You can add view in the <i>Interface Builder</i> and set a class to <i>Chart</i> or create in the code: <br>
 <pre>
 Chart *chart = [[Chart alloc] initWithFrame:CGRectMake(0, 256, 256, 256)];
 [self.view addSubview:chart];
@@ -49,7 +49,7 @@ for (NSInteger groupIndex = 0; groupIndex &#60; 5; ++groupIndex) {
   [self.chart setData:array withKey:[NSString stringWithFormat:@"Group %d", groupIndex+1] withTotal:total];
 }
 </pre>
-For scrolling datasets just tap on chart.
+For scrolling datasets just tap on the chart.
 <br>
 If you have one set of data, and you won't scroll them, use the following property:
 <pre>
