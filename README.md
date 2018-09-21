@@ -1,7 +1,7 @@
 iOS Pie Chart
 =============
 
-Pie chart control.<br>
+A pie chart control.<br>
 ![alt tag](https://raw.github.com/maximbilan/ios_pie_chart/master/img/img1.png)
 
 ## Installation
